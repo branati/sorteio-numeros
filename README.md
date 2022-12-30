@@ -9,9 +9,7 @@ O arquivo release é um executável.
 
 Ele sorteia, por padrão, 10 conjuntos de 6 números entre 1 e 60!
 
-Se você quiser mudar outros pa
-
-Execute :
+Se você quiser mudar outros parametros, pode utilizar os comandos -q, -r ou -v.
 
 ```
 ./sorteio-numeros --help
