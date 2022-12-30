@@ -4,13 +4,13 @@ fn main() {
     let mut rng = thread_rng();
 
     let mut list_numbers: Vec<Vec<u32>> = Vec::new();
-    let matches = App::new("Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.0")
+    let matches = App::new("Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.01")
     .arg(
         Arg::with_name("vetor-elementos")
             .short("v")
             .long("vetor-elementos")
             .value_name("NÚMERO")
-            .help("A quantidade de elementos do vetor")
+            .help("A quantidade de elementos do vetor. Padrão: 6.")
             .takes_value(true),
     )
     .arg(
@@ -18,7 +18,7 @@ fn main() {
             .short("q")
             .long("quantidade-numeros")
             .value_name("NÚMERO")
-            .help("A quantidade de números sorteados")
+            .help("A quantidade de números sorteados. Padrão: 10.")
             .takes_value(true),
     )
     .arg(
@@ -26,7 +26,7 @@ fn main() {
             .short("r")
             .long("range")
             .value_name("NÚMERO")
-            .help("O intervalo de números que serão sorteados")
+            .help("O intervalo de números que serão sorteados. Padrão: 1 a 60.")
             .takes_value(true),
     )
     .get_matches();
