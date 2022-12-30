@@ -31,17 +31,3 @@ OPTIONS:
 ```
 
 
-Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.0 
-
-USAGE:
-    sorteio-numeros-megasena [OPTIONS]
-
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
-
-OPTIONS:
-    -q, --quantidade-numeros <NÚMERO>    A quantidade de números sorteados
-    -r, --range <NÚMERO>                 O intervalo de números que serão sorteados
-    -v, --vetor-elementos <NÚMERO>       A quantidade de elementos do vetor
-
