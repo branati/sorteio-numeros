@@ -15,19 +15,19 @@ Execute :
 
 ```
 ./sorteio-numeros --help
-Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.0 
+Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.01 
 
 USAGE:
-    sorteio-numeros-megasena [OPTIONS]
+    sorteio-numeros [OPTIONS]
 
 FLAGS:
     -h, --help       Prints help information
     -V, --version    Prints version information
 
 OPTIONS:
-    -q, --quantidade-numeros <NÚMERO>    A quantidade de números sorteados
-    -r, --range <NÚMERO>                 O intervalo de números que serão sorteados
-    -v, --vetor-elementos <NÚMERO>       A quantidade de elementos do vetor
+    -q, --quantidade-numeros <NÚMERO>    A quantidade de números sorteados. Padrão: 10.
+    -r, --range <NÚMERO>                 O intervalo de números que serão sorteados. Padrão: 1 a 60.
+    -v, --vetor-elementos <NÚMERO>       A quantidade de elementos do vetor. Padrão: 6.
 ```
 
 
