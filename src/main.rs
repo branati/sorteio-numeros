@@ -1,3 +1,5 @@
+use std::fs::File;
+use std::io::{self, Write};
 use rand::{thread_rng, Rng};
 use clap::{App, Arg};
 fn main() {
@@ -29,6 +31,14 @@ fn main() {
             .help("O intervalo de números que serão sorteados. Padrão: 1 a 60.")
             .takes_value(true),
     )
+    .arg(
+        Arg::with_name("export")
+            .short("e")
+            .long("export")
+            .value_name("ARQUIVO")
+            .help("O nome do arquivo de saída para exportar os números sorteados")
+            .takes_value(true),
+    )
     .get_matches();
 
     let vetor_elementos: u32 = matches
@@ -49,6 +59,8 @@ fn main() {
     .parse()
     .unwrap();
 
+    let export_filename = matches.value_of("export").unwrap_or("");
+
     for _ in 0..quantidade_numeros {
         let mut numbers: Vec<u32> = Vec::new();
         let mut drawn_numbers: Vec<u32> = Vec::new();
@@ -67,6 +79,16 @@ fn main() {
         numbers.sort();
 
         list_numbers.push(numbers);
+    }
+
+    if !export_filename.is_empty() {
+        let mut file = File::create(export_filename).unwrap();
+        for numbers in &list_numbers {
+            for number in numbers {
+                write!(file, "{} ", number).unwrap();
+            }
+            write!(file, "\n").unwrap();
+        }
     }
 
     println!("Os conjuntos de números sorteados são: {:?}", list_numbers);
