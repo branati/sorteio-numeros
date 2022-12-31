@@ -13,7 +13,7 @@ Se você quiser mudar outros parametros, pode utilizar os comandos -q, -r ou -v.
 
 ```
 ./sorteio-numeros --help
-Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.01 
+Sorteio de dezenas. By BRaNaTi and ChatGPT. 
 
 USAGE:
     sorteio-numeros [OPTIONS]
