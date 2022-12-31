@@ -6,7 +6,7 @@ fn main() {
     let mut rng = thread_rng();
 
     let mut list_numbers: Vec<Vec<u32>> = Vec::new();
-    let matches = App::new("Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.01")
+    let matches = App::new("Sorteio de dezenas. By BRaNaTi and ChatGPT. v1.0.2")
     .arg(
         Arg::with_name("vetor-elementos")
             .short("v")
